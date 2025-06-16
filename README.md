@@ -29,4 +29,8 @@ parser yourself and access the `ast` field of the `ParserOutput`, or if you have
 the `Scamper` object's `parseroutput.ast` field.
 
 The `AST` object itself is defined in `ast.ts`, along with `SyntaxNode`. The tree holds a collection of nodes, and each node holds a textual description and a list
-of children. Better documentation forthcoming.
+of children. Anyone who needs screen-reader compatibility can call the describe() method of an AST, which will return a plain english description of the structure
+of the syntax tree. WARNING: while accurate, for nontrivial programs this description can run quite long. I've tried as hard as I can to make it easy to read, but
+precisely and accurately describing a nontrivial tree in plain english is not an easy task.
+
+Better documentation forthcoming.
